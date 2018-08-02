@@ -1,0 +1,28 @@
+{
+	"APPCONFIG":{
+		"masterIP":"127.0.0.1:42012",
+		"logging": false,
+		"threadID":"thread1",
+		"threadRegistryCleanupInterval":1000,
+		"p2p":{
+			"serverPort":42006,
+			"isAliveInterval":3000,
+			"socketResponseTimeout":60000,
+			"stateSyncPort":5001
+		},
+		"bufferConfig":{
+			"inputBufferTimeout":1000,
+			"dedupeBufferTTL":900000,
+			"size":50
+		}
+	},
+
+	"isMaster":false,
+
+	"codebase":{
+		"path":"/codebase",
+		"uiPath":"/ui",
+		"port":42005,
+		"mainFile":"main.js"
+	}
+}

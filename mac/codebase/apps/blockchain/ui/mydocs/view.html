@@ -1,0 +1,110 @@
+<div class="row">
+	<div class="col-3 text-center">
+		<div class="row my-3">
+			<div class="col">
+				<div class="btn btn-default btn-block document-list-item" ng-click="createNew()">New file</div>
+			</div>
+		</div>
+
+		<div class="row my-3">
+			<div class="col">
+				<div class="document-list">
+					<div class="document-list-item" ng-repeat="item in documents" ng-click="selectDocument(item)">
+						file:
+						<h6>{{item.chain.revBlock.block.meta.tags[0]}}</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row  my-5 text-left">
+			<div class="col">
+				<h5>Edit History:</h5>
+				<div class="version-list">
+					<div class="version-list-item" ng-repeat="item in blocksList" ng-click="selectBlock(item)">
+						<h6>Rev:<span style="font-size:0.7em">{{item.blockID}}</span></h6>
+						<div>Author:{{accountLookup(item.meta.author.chainID)}}</div>
+						<div>Notes:{{item.data.notes}}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-6 text-center">
+		<div ng-show="viewState == 'createNew'">
+			<div class="row my-5">
+				<div class="col text-center">
+					fileName:<input ng-model="currentBlock.meta.tags[0]"></input>
+				</div>
+				<div class="col text-center">
+					tags:<input ng-model="currentBlock.meta.tags[1]"></input>
+				</div>
+			</div>
+			<div class="row my-5">
+				<div class="col">
+					<h5>Contents:</h5>
+					<textarea class="contents-ta" ng-model="currentBlock.data.contents"></textarea>
+				</div>
+			</div>
+			<div class="row my-5">
+				<div class="col">
+					<h5>Notes:</h5>
+					<textarea class="notes-ta" ng-model="currentBlock.data.notes"></textarea>
+				</div>
+			</div>
+			<div class="row my-5">
+				<div class="col">
+					<button ng-show="currentDocument == null"class="btn btn-primary" ng-click="createDoc()">Create</button>
+					<button ng-show="currentDocument && currentBlock.blockID == currentDocument.chain.revBlock.block.blockID"class="btn btn-primary" ng-click="updateDoc()">Update</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="col-3 text-center">
+		<div class="row my-5">
+			<div class="col text-center">
+				<h5>Consensus Req</h5>
+				<div class="row">
+					<div class="col text-center">
+						holders:
+					</div>
+					<div class="col text-center">
+						<span>{{currentBlock.meta.genesis.totalHolders}}</span> / {{threads.length}}
+					</div>
+				</div>
+				<div class="row">
+					<div class="col text-center">
+						minimum:
+					</div>
+					<div class="col text-center">
+						<span>{{currentBlock.meta.genesis.minHolders}}</span> / {{threads.length}}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row my-5">
+			<div class="col text-center">
+				<h5>Permissions</h5>
+				<div class="row" ng-repeat="(key,value) in currentPermissions">
+					<div class="col text-right"><b>{{accountLookup(key)}}</b></div>
+					<div class="col text-left">{{value}}</div>
+				</div>
+				<button class="btn btn-warning" ng-click="permModal.launch()">Add account</button>
+			</div>
+		</div>
+	</div>
+	<div class="modal-credentials" ng-show="permModal.show">
+		<div class="row" style="border-bottom:solid 1px lightgray;" ng-repeat="item in accounts" ng-click="permModal.doAllow(item)">
+			<div class="col">
+				username : {{item.chain.genesisBlock.block.data.username}}
+			</div>
+		</div>
+		<div class="row my-5 text-center">
+
+			<div class="col">
+				<button class="btn btn-info" ng-click="permModal.cancel()">Close</button>
+			</div>
+		</div>
+	</div>
+</div>

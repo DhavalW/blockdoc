@@ -1,0 +1,77 @@
+<div ng-show="!loggedInUser">
+	<button class="btn btn-info" ng-click="registerModal.launch()">Register</button>
+</div>
+<div ng-show="loggedInUser">
+	<div>Username:{{loggedInUser.username}}</div>
+	<div>AccountID:{{loggedInUser.accountID}}</div>
+</div>
+
+<div class="modal-credentials" ng-show="loginModal.show">
+	<div class="row">
+		<div class="col">
+			AccountID:
+		</div>
+		<div class="col">
+			<input ng-model="loginModal.details.accountID"></input>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			Username:
+		</div>
+		<div class="col">
+			<input ng-model="loginModal.details.username"></input>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			Password:
+		</div>
+		<div class="col">
+			<input ng-model="loginModal.details.dpassword"></input>
+		</div>
+	</div>
+	<div class="row text-center">
+		<div class="col">
+			<button class="btn btn-primary" ng-click="loginModal.doLogin()">Login</button>
+		</div>
+		<div class="col">
+			<button class="btn btn-default" ng-click="loginModal.cancel()">Cancel</button>
+		</div>
+	</div>
+</div>
+
+<div class="modal-credentials" ng-show="registerModal.show">
+	<div class="row">
+		<div class="col">
+			Username:
+		</div>
+		<div class="col">
+			<input ng-model="registerModal.details.username"></input>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			Password:
+		</div>
+		<div class="col">
+			<input ng-model="registerModal.details.password"></input>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			Role:
+		</div>
+		<div class="col">
+			<input ng-model="registerModal.details.role"></input>
+		</div>
+	</div>
+	<div class="row text-center">
+		<div class="col">
+			<button class="btn btn-primary" ng-click="registerModal.doRegister()">Register</button>
+		</div>
+		<div class="col">
+			<button class="btn btn-default" ng-click="registerModal.cancel()">Cancel</button>
+		</div>
+	</div>
+</div>

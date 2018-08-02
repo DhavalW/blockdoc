@@ -1,0 +1,92 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+/* .menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+} */
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li + li:before {
+  /* content: "|"; */
+  padding-right: 0.3em;
+}
+
+.menu .loginBox {
+	float:right;
+	width:25%;
+	border-left:solid 1px black;
+	padding-left:1em;
+}
+
+.modal-credentials {
+	position:absolute;
+	top:30vh;
+	left:30vw;
+	z-index: 1000;
+	background: white;
+	border:solid 1px lightgray;
+	border-radius:1em;
+	padding:1.5em;
+}
+
+/*----------- My docs view -----------*/
+
+/* LHS bar */
+.create-button {
+	padding:1em;
+}
+
+.document-list-item {
+	border-bottom:solid 1px lightgray;
+	border-top:solid 1px lightgray;
+	padding:1em;
+}
+.document-list-item:hover {
+	background: rgba(128,128,128,0.3);
+}
+.document-list-item .active {
+	background: rgba(128,128,128,0.5);
+}
+
+.version-list-item {
+	border-bottom:solid 1px lightgray;
+	border-top:solid 1px lightgray;
+	padding:1em;
+}
+.version-list-item:hover {
+	background: rgba(128,128,128,0.3);
+}
+.version-list-item .active {
+	background: rgba(128,128,128,0.5);
+}
+
+
+/* Center Bar*/
+.contents-ta{
+	width:100%;
+	min-height:30vh;
+}
+.notes-ta{
+	width:100%;
+	min-height:10vh;
+}
+
+
+/* RHS Bar */
+.permissions-ta{
+	width:100%;
+	min-height:20vh;
+}

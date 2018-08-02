@@ -1,0 +1,16 @@
+{
+  "name": "lastfm-search",
+  "version": "1.0.0",
+  "description": "St8Flo / Cluster8 Demo - Search from a public dataset - Last.Fm's artiste tags",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Dhaval W",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "line-by-line": "^0.1.6"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,41 @@
+{
+	"APPCONFIG":{
+		"masterIP":"127.0.0.1:42012",
+		"threadID": "master",
+		"logging": false,
+		"threadRegistryCleanupInterval":1000,
+		"p2p":{
+			"serverPort":42015,
+			"isAliveInterval":3000,
+			"socketResponseTimeout":60000,
+			"stateSyncPort":5000
+		},
+		"bufferConfig":{
+			"inputBufferTimeout":1000,
+			"dedupeBufferTTL":900000,
+			"size":50
+		}
+	},
+
+	"isMaster":true,
+
+	"codebase":{
+		"path":"/codebase",
+		"uiPath":"/ui",
+		"port":42011,
+		"mainFile":"main.js"
+	},
+
+	"ds":{
+		"websocketPort":42012,
+		"pubsubPort":42013,
+		"pipelinePort":42014,
+		"peerDiscovery":false,
+		"peerDiscoveryOptions":{},
+		"peerDiscoveryTimeout":20,
+
+		"peerList":[
+
+		]
+	}
+}
