@@ -1,6 +1,14 @@
 Blockchain based Document Management system prototype. 
 Submission for IBC Hack 2018. Built with St8Flo http://www.st8flo.com
 
+# Demo features:
+1. Distributed Authentication 
+2. Permissioned access
+3. Document Redundancy
+4. Revision / Edit history
+
+### Demo video: https://youtu.be/B-JRJaqXlsY
+
 # Get started
 
 1. download or clone this repo.
