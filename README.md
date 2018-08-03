@@ -29,5 +29,6 @@ Submission for IBC Hack 2018. Built with St8Flo http://www.st8flo.com
 ## Website: http://www.st8flo.com
 
 # Additional Notes
-The goal of St8Flo is to be a unifying platform that combines all manners of distributed computing, ranging from blockchains to bigdata and machine learning and present them as easy to use API's that developers can build a complete reactive system, on top of.
-Being in Javascript, its one of the only few platforms that bring the hottest  technologies like Blockchain, distribtued machine learning and analytics, natively to 71% of the world's developers (JS devs).
+The goal of St8Flo is to be a unifying platform that combines all manners of distributed computing, ranging from blockchains to bigdata and machine learning, & present them as easy to use API's, that developers can use to build complex reactive distributed system that just work.
+
+Being in Javascript, it is also one of the only few platforms that bring the hottest technologies like Blockchain, distribtued machine learning and analytics, natively to Javascript and 71% of the world's developers.
