@@ -1,3 +1,5 @@
+#### Warning - This is an experimental proof of concept, unmaintained & old. May even be broken. I'd love to fix / improve it but need to focus on my own survival currently. Feel free to try at your own peril till then :)
+
 Blockchain based Document Management system prototype. 
 Built with St8Flo http://www.st8flo.com
 
