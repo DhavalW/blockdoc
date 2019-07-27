@@ -1,7 +1,7 @@
 #### Warning - This is an experimental proof of concept, unmaintained & old. May even be broken. I'd love to fix / improve it but need to focus on my own survival currently. Feel free to try at your own peril till then :)
 
 Blockchain based Document Management system prototype. 
-Built with St8Flo http://www.st8flo.com
+Built with St8Flo https://qoorius.com/st8flo/
 
 # Demo features:
 1. Distributed Authentication 
@@ -28,7 +28,7 @@ Built with St8Flo http://www.st8flo.com
 - Currently runs on mac only, under a restricted signed license. Docker version will be put out soon.
 - In production, this license can be used to identify nodes in a machine that belong to an organisation.
 
-## Website: http://www.st8flo.com
+### Website: https://qoorius.com/st8flo/
 
 # Additional Notes
 The goal of St8Flo is to be a unifying platform that combines all manners of distributed computing, ranging from blockchains to bigdata and machine learning, & present them as easy to use API's, that developers can use to build complex reactive distributed system that just work.
